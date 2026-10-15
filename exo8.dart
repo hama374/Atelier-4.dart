@@ -25,3 +25,27 @@ class Roman extends Livre {
     print('Genre : $genre');
   }
 }
+void main() {
+  var livre1 = Livre('Les Miserables', 'Victor Hugo');
+  var livre2 = Livre('L Etranger', 'Albert Camus');
+
+  livre1.afficherInfos();
+  print('Pages : ${livre1.pages}');
+
+  livre2.afficherInfos();
+
+  var roman1 = Roman(
+      'Sherlock Holmes',
+      'Arthur Conan Doyle',
+      'Policier');
+
+  var roman2 = Roman(
+      'Le Comte de Monte-Cristo',
+      'Alexandre Dumas',
+      'Aventure');
+
+  roman1.afficherRoman();
+  roman2.afficherRoman();
+
+  Livre.afficherTotalLivres();
+}
